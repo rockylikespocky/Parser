@@ -5,6 +5,8 @@
 
 using namespace std;
 
+//Optional: change the cell struct name to "myRule" to represent rules in the matrix. (Makes sense a little more for the matrix)
+
 struct cell {
 	int theID;
 	string theLeftSide;
@@ -22,6 +24,10 @@ void cell::setCell(int id, string lhs, string rhs)
 
 
 int main() {
+	
+	cell mycell0;
+	myCell1.setCell(0, "0", "0");
+
 
 	cell myCell1;
 	myCell1.setCell(1, "Pgm", "kwdprog brace1 Slist brace2");
