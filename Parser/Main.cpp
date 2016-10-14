@@ -25,6 +25,7 @@ void cell::setCell(int id, string lhs, string rhs)
 
 int main() {
 	
+	//This cell 0 will be used to throw the error for the blank spaces in the matrix.
 	cell mycell0;
 	myCell1.setCell(0, "0", "0");
 
