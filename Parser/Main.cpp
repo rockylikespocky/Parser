@@ -42,18 +42,77 @@ int main() {
 	cell myCell4;
 	myCell4.setCell(4, "Stmt", "S_Out");
 
-	cell myCell1;
+	cell myCell5;
 	myCell1.setCell(5, "Stmt", "id equal Y1");
 
-	cell myCell2;
+	cell myCell6;
 	myCell2.setCell(6, "S_Out", "kwdprint paren1 Elist paren2");
 
 	cell myCell7;
 	myCell7.setCell(7, "Y1", "E");
-
-
-
 	
+	cell mycell8;
+	myCell8.setCell(8, "Y1", "kwdinput");
+	
+	cell myCell9;
+	myCell2.setCell(9, "Elist", "E Elist2");
+
+	cell myCell10;
+	myCell7.setCell(10, "Elist", "eps");
+	
+	cell mycell1;
+	myCell8.setCell(11, "Elist2", "comma Elist");
+	
+	cell myCell12;
+	myCell1.setCell(12, "E", "T X1");
+
+	cell myCell13;
+	myCell2.setCell(13, "X1", "Opadd T X1");
+
+	cell myCell14;
+	myCell7.setCell(14, "X1", "eps");
+	
+	cell mycell15;
+	myCell8.setCell(15, "T", "F X2");
+	
+	cell myCell16;
+	myCell2.setCell(16, "X2", "Opmul F X2");
+
+	cell myCell117;
+	myCell7.setCell(17, "X2", "eps");
+	
+	cell mycell18;
+	myCell8.setCell(18, "F", "Fatom");
+	
+	cell myCell19;
+	myCell2.setCell(19, "F", "paren1 E paren2");
+
+	cell myCell20;
+	myCell7.setCell(20, "Fatom", "id");
+	
+	cell mycell21;
+	myCell8.setCell(21, "Fatom", "int");
+	
+	cell myCell22;
+	myCell7.setCell(22, "Fatom", "float");
+	
+	cell mycell23;
+	myCell8.setCell(23, "Fatom", "string");
+	
+	cell myCell24;
+	myCell7.setCell(24, "Opadd", "plus");
+	
+	cell mycell25;
+	myCell8.setCell(25, "Opadd", "minus");
+	
+	cell myCell26;
+	myCell7.setCell(26, "Opmul", "aster");
+	
+	cell mycell27;
+	myCell8.setCell(27, "Opmul", "slash");
+	
+	cell mycell28;
+	myCell8.setCell(28, "Opmul", "caret");
 	
 	cell theMatrix[15][19] =
 	{
