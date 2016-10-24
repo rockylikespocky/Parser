@@ -25,10 +25,12 @@ void useFile1(string fileName) {
 
 void useFile2(string fileName) {
     Lexer l(fileName);
+	Parser p(l.getQueue());
 }
 
 void useFile3(string fileName) {
     Lexer l(fileName);
+	Parser p(l.getQueue());
 }
 
 void useCustomFile() {
@@ -36,10 +38,12 @@ void useCustomFile() {
     cout << "Type in your filename: ";
     cin >> inputFileName;
     Lexer l(inputFileName);
+	Parser p(l.getQueue());
 }
 
 void Stdin() {
     Lexer l;
+	Parser p(l.getQueue());
 }
 
 int main() {

@@ -1,6 +1,6 @@
 //
 //  Lexer.h
-//  Parser
+//  Lexer Class header file.
 //
 //  Created by Nhat Nguyen on 10/10/16.
 //  Created by Adam Adame on 10/10/16.

@@ -1,6 +1,6 @@
 //
 //  Lexer.cpp
-//  Parser
+//  The Lexer Class source file modified to return output to the Parser Class.
 //
 //  Created by Nhat Nguyen on 10/10/16.
 //  Created by Adam Adame on 10/10/16.
@@ -39,7 +39,7 @@ Lexer::Lexer(string file_name) {
     
     if (inFile.is_open()) {
         cout << "Success: File is opened." << endl;
-        cout << "~~~~~Starting Lexer~~~~~" << endl;
+        cout << "Starting Lexer" << endl;
     }
     if (!inFile.is_open()) {
         cout << "Error: File won't open." << endl;
@@ -454,14 +454,6 @@ void Lexer::endingProcess() {
     idNumber = 0;
     lineCount -= 2;
     printOutput();
-    
-    // Testing to make sure that Queue is properly pushing Tokens
-    cout << "Testing Queue: " << endl;
-    for (int i = 0; (Queue.size() != 0); i++) {
-        Token currentToken = Queue.front();
-        cout << currentToken.tokenID << currentToken.tokenItem << endl;
-        Queue.pop_front();
-    }
 }
 
 deque<Token> Lexer::getQueue() {
