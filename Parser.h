@@ -23,106 +23,73 @@ struct cell {
         int theID;
         string theLeftSide;
         string theRightSide;
-        void setCell(int idNumber, string lhs, string rhs);
+		
     };
 
-void cell::setCell(int idNumber, string lhs, string rhs) 
-{
-            theID = idNumber;
-            theLeftSide = lhs;
-            theRightSide = rhs;
-}
+
 
 class Parser {
+
+
+	//This cell 0 will be used to throw the error for the blank spaces in the matrix.
+
+	cell myCell0 = { 0, "", "" };
+
+	cell myCell1 = { 1, "Pgm", "kwdprog brace1 Slist brace2" };
+
+	cell myCell2 = { 2, "Slist", "Stmt semi Slist" };
+
+	cell myCell3 = { 3, "Slist", "eps" };
+
+	cell myCell4{ 4, "Stmt", "S_Out" };
+
+	cell myCell5 = { 5, "Stmt", "id equal Y1" };
+
+	cell myCell6 = { 6, "S_Out", "kwdprint paren1 Elist paren2" };
+
+	cell myCell7 = { 7, "Y1", "E" };
+
+	cell myCell8 = { 8, "Y1", "kwdinput" };
+
+	cell myCell9 = {9, "Elist", "E Elist2"};
     
+	cell myCell10 = { 10, "Elist", "eps" };
     
-    //This cell 0 will be used to throw the error for the blank spaces in the matrix.
-    cell myCell0;
-    myCell0.setCell(0, "", "");
+	cell myCell11 = { 11, "Elist2", "comma Elist" };
     
-    cell myCell1;
-    myCell1.setCell(1, "Pgm", "kwdprog brace1 Slist brace2");
+	cell myCell12 = { 12, "E", "T X1" };
     
-    cell myCell2;
-    myCell2.setCell(2, "Slist", "Stmt semi Slist");
+	cell myCell13 = { 13, "X1", "Opadd T X1" };
     
-    cell myCell3;
-    myCell3.setCell(3, "Slist", "eps");
+	cell myCell14 = { 14, "X1", "eps" };
     
-    cell myCell4;
-    myCell4.setCell(4, "Stmt", "S_Out");
+	cell myCell15 = { 15, "T", "F X2" };
     
-    cell myCell5;
-    myCell5.setCell(5, "Stmt", "id equal Y1");
+	cell myCell16 = { 16, "X2", "Opmul F X2" };
     
-    cell myCell6;
-    myCell6.setCell(6, "S_Out", "kwdprint paren1 Elist paren2");
+	cell myCell117 = { 17, "X2", "eps" };
     
-    cell myCell7;
-    myCell7.setCell(7, "Y1", "E");
+	cell mycell18 = { 18, "F", "Fatom" };
     
-    cell myCell8;
-    myCell8.setCell(8, "Y1", "kwdinput");
+	cell myCell19 = { 19, "F", "paren1 E paren2" };
     
-    cell myCell9;
-    myCell9.setCell(9, "Elist", "E Elist2");
+	cell myCell20 = { 20, "Fatom", "id" };
     
-    cell myCell10;
-    myCell10.setCell(10, "Elist", "eps");
+	cell myCell21 = { 21, "Fatom", "int" };
     
-    cell mycell1;
-    myCel11.setCell(11, "Elist2", "comma Elist");
+	cell myCell22 = { 22, "Fatom", "float" };
     
-    cell myCell12;
-    myCell12.setCell(12, "E", "T X1");
+	cell myCell23 = { 23, "Fatom", "string" };
     
-    cell myCell13;
-    myCell13.setCell(13, "X1", "Opadd T X1");
+	cell myCell24 = { 24, "Opadd", "plus" };
     
-    cell myCell14;
-    myCel14.setCell(14, "X1", "eps");
+	cell myCell25 = { 25, "Opadd", "minus" };
     
-    cell mycell15;
-    myCel15.setCell(15, "T", "F X2");
+	cell myCell26 = { 26, "Opmul", "aster" };
     
-    cell myCell16;
-    myCel16.setCell(16, "X2", "Opmul F X2");
+	cell myCell27 = { 27, "Opmul", "slash" };
     
-    cell myCell117;
-    myCell17.setCell(17, "X2", "eps");
-    
-    cell mycell18;
-    myCell18.setCell(18, "F", "Fatom");
-    
-    cell myCell19;
-    myCell19.setCell(19, "F", "paren1 E paren2");
-    
-    cell myCell20;
-    myCell20.setCell(20, "Fatom", "id");
-    
-    cell myCell21;
-    myCell21.setCell(21, "Fatom", "int");
-    
-    cell myCell22;
-    myCell22.setCell(22, "Fatom", "float");
-    
-    cell myCell23;
-    myCell23.setCell(23, "Fatom", "string");
-    
-    cell myCell24;
-    myCel24.setCell(24, "Opadd", "plus");
-    
-    cell myCell25;
-    myCell25.setCell(25, "Opadd", "minus");
-    
-    cell myCell26;
-    myCell26.setCell(26, "Opmul", "aster");
-    
-    cell myCell27;
-    myCell27.setCell(27, "Opmul", "slash");
-    
-    cell myCell28;
-    myCell28.setCell(28, "Opmul", "caret");
+	cell myCell28 = { 28, "Opmul", "caret" };
     
     cell theMatrix[15][19] =
     {
