@@ -19,13 +19,22 @@
 
 using namespace std;
 
-class Parser {
-    struct cell {
+struct cell {
         int theID;
         string theLeftSide;
         string theRightSide;
         void setCell(int idNumber, string lhs, string rhs);
     };
+
+void setCell(int idNumber, string lhs, string rhs) 
+{
+            theID = idNumber;
+            theLeftSide = lhs;
+            theRightSide = rhs;
+}
+
+class Parser {
+    
     
     //This cell 0 will be used to throw the error for the blank spaces in the matrix.
     cell myCell0;
