@@ -26,7 +26,7 @@ struct cell {
         void setCell(int idNumber, string lhs, string rhs);
     };
 
-void setCell(int idNumber, string lhs, string rhs) 
+void cell::setCell(int idNumber, string lhs, string rhs) 
 {
             theID = idNumber;
             theLeftSide = lhs;
