@@ -16,7 +16,7 @@
 #include <map>
 #include <string>
 #include <vector>
-#include <queue>
+#include <deque>
 
 using namespace std;
 
@@ -72,7 +72,7 @@ public:
     void endingProcess();
     // ending print and close file
     
-    queue<Token> getQueue();
+    deque<Token> getQueue();
     // returns the Queue containing Token structs
     
 private:
@@ -86,7 +86,7 @@ private:
     string tempstr;
     string type;
     
-    queue<Token> Queue;
+    deque<Token> Queue;
 };
 
 #endif /* Lexer_h */

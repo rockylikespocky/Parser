@@ -211,7 +211,7 @@ void Lexer::saveInfo() {
     myToken.lineNumber = lineCount;
     myToken.tokenID = idNumber;
     myToken.tokenItem = token;
-    Queue.push(myToken);
+    Queue.push_back(myToken);
 }
 
 void Lexer::setTokenID() {
@@ -460,10 +460,10 @@ void Lexer::endingProcess() {
     for (int i = 0; (Queue.size() != 0); i++) {
         Token currentToken = Queue.front();
         cout << currentToken.tokenID << currentToken.tokenItem << endl;
-        Queue.pop();
+        Queue.pop_front();
     }
 }
 
-queue<Token> Lexer::getQueue() {
+deque<Token> Lexer::getQueue() {
     return Queue;
 }
