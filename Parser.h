@@ -24,11 +24,7 @@ class Parser {
         int theID;
         string theLeftSide;
         string theRightSide;
-        void setCell(int idNumber, string lhs, string rhs) {
-            theID = idNumber;
-            theLeftSide = lhs;
-            theRightSide = rhs;
-        }
+        void setCell(int idNumber, string lhs, string rhs);
     };
     
     //This cell 0 will be used to throw the error for the blank spaces in the matrix.
