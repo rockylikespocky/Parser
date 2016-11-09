@@ -1,19 +1,13 @@
 enum ASTNodeType 
 {
-   Undefined,
-   OperatorPlus,
-   OperatorMinus,
-   OperatorMul,
-   OperatorDiv,
-   UnaryMinus,
-   NumberValue
+   /*List all possible type of parents and children. basically nonterminals and terminals*/
 };
  
 class ASTNode
 {
 public:
    ASTNodeType Type;
-   double      Value;
+   auto      Value;
    ASTNode*    Left;
    ASTNode*    Right;
  
